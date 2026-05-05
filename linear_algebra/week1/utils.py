@@ -4,7 +4,10 @@ import matplotlib.pyplot as plt
 # from eqn a1x + a2y = b
 
 
-def plot_lines(A, b):
+def plot_lines(solve):
+    A = solve[:, :-1]  # get all cols except last col
+    b = solve[:, -1]  # get only last col
+
     # get as many x values so we substitute to get as many y values
     x_values = np.linspace(-5, 5, 100)
 
